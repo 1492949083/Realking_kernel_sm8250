@@ -292,6 +292,12 @@ struct dm_target {
 	 */
 	unsigned per_io_data_size;
 
+	
+	/*
+	* Set if we need to limit the number of in-flight bios when swapping.
+	*/
+	bool limit_swap_bios:1;
+
 	/* target specific data */
 	void *private;
 
